@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 정보 검색기</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍎 음식 정보 검색기</h1>
+            <p>음식의 칼로리, 영양성분, 효능을 검색해보세요!</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="음식 이름을 입력하세요 (예: 사과, 바나나, 쌀밥)">
+                <button id="searchBtn">검색</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div id="loadingSpinner" class="loading hidden">검색 중...</div>
+            <div id="errorMessage" class="error hidden"></div>
+            <div id="foodInfo" class="food-info hidden">
+                <div class="food-header">
+                    <h2 id="foodName"></h2>
+                    <span id="foodCategory" class="category"></span>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📊 기본 정보</h3>
+                        <div class="info-content">
+                            <p><strong>칼로리:</strong> <span id="calories"></span></p>
+                            <p><strong>단백질:</strong> <span id="protein"></span></p>
+                            <p><strong>지방:</strong> <span id="fat"></span></p>
+                            <p><strong>탄수화물:</strong> <span id="carbs"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🧪 영양성분</h3>
+                        <div class="info-content">
+                            <p><strong>나트륨:</strong> <span id="sodium"></span></p>
+                            <p><strong>콜레스테롤:</strong> <span id="cholesterol"></span></p>
+                            <p><strong>포화지방산:</strong> <span id="saturatedFat"></span></p>
+                            <p><strong>트랜스지방산:</strong> <span id="transFat"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💊 미네랄 & 비타민</h3>
+                        <div class="info-content">
+                            <p><strong>칼슘:</strong> <span id="calcium"></span></p>
+                            <p><strong>철분:</strong> <span id="iron"></span></p>
+                            <p><strong>인:</strong> <span id="phosphorus"></span></p>
+                            <p><strong>칼륨:</strong> <span id="potassium"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🌟 건강 효능</h3>
+                        <div class="info-content">
+                            <div id="healthBenefits"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popular-foods">
+            <h3>인기 검색 음식</h3>
+            <div class="food-tags">
+                <span class="food-tag" data-food="사과">🍎 사과</span>
+                <span class="food-tag" data-food="바나나">🍌 바나나</span>
+                <span class="food-tag" data-food="쌀밥">🍚 쌀밥</span>
+                <span class="food-tag" data-food="닭가슴살">🍗 닭가슴살</span>
+                <span class="food-tag" data-food="달걀">🥚 달걀</span>
+                <span class="food-tag" data-food="우유">🥛 우유</span>
+                <span class="food-tag" data-food="두부">🥛 두부</span>
+                <span class="food-tag" data-food="김치">🥬 김치</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
